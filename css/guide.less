@@ -1,0 +1,49 @@
+
+#kissit-help-group{
+  .help-cover{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 999;
+  }
+  .cursor{
+    position: absolute;
+    width: 32px;
+    height: 32px;
+    display: block;
+    left: 50%;
+    top: 50%;
+    z-index: 10001;
+    background-image: url(../image/cursor.png);
+    background-repeat: no-repeat;
+  }
+}
+
+#help-top-cover{
+  z-index: 99999 !important;
+}
+#help-bottom-cover{
+  background: rgba(0, 0, 0, 0.5);
+}
+#help-description{
+  display: block;
+  position: absolute;
+  right: 0;
+  top: 0;
+  z-index: 10000;
+  width: 300px;
+  padding: 20px;
+}
+
+.guide-focus{
+  z-index: 10000 !important;
+}
+
+#help-btn-skip{
+  position: absolute;
+  z-index: 100000;
+  right: 0;
+  bottom: 0;
+}
