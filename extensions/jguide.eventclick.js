@@ -1,5 +1,5 @@
 (function($){
-   Guide.extension.eventclick = {
+   jGuide.extension.eventclick = {
      elem: null,
      move_interval: null,
      emulation_click: true,
@@ -23,7 +23,7 @@
           if(_this_.elem.length){
             _this_.elem.addClass("guide-focus"); 
             if(action['description']){
-              Guide.displayMessage(description);
+              jGuide.displayMessage(description);
               _this_.clickToEmulation = _this_.emulationClick.bind(_this_,action,callback);
               $help_top_cover.bind("click",_this_.clickToEmulation);
             }else if(_this_.emulation_click){
@@ -88,7 +88,7 @@
           _this_.elem = null;
        }
        if(action['description']){
-         Guide.clearMessages(callback);
+         jGuide.clearMessages(callback);
        }else{
          callback();
        }

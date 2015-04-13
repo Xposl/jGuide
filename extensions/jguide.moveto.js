@@ -1,4 +1,4 @@
-//Guide Function 'Move To'
+//jGuide Function 'Move To'
 //  name: move to
 //  author: xposl
 //  date: March, 5th, 2014
@@ -13,7 +13,7 @@
  * }
  */
 (function($){
-   Guide.extension.moveto = {
+   jGuide.extension.moveto = {
      move_interval: null,
      elem: null,
      offset: {top:0,left:0},
@@ -66,7 +66,7 @@
            }
           
            if(action['description']){
-             Guide.displayMessage(action['description']);
+             jGuide.displayMessage(action['description']);
              $help_cursor.animate(_this_.offset,duration,function(){
                $help_cursor.css(init_offsest);
              });
@@ -104,7 +104,7 @@
          _this_.clickToNext = null;
        }       
        if(action['description']){
-         Guide.clearMessages(callback);
+         jGuide.clearMessages(callback);
        }else if(typeof callback == 'function'){
          callback();
        }

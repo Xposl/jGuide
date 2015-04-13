@@ -1,5 +1,5 @@
 (function($){
-   Guide.extension.message = {
+   jGuide.extension.message = {
      elem: null,
      clickToNext: null,
      run: function(action,callback){
@@ -21,7 +21,7 @@
             var type_regex = /(success|primary|info|warning|danger)/;
             var description_type = action['messageType'] != undefined && type_regex.test(action['messageType'])? action['messageType'] : 'info';
             var description = action['description'] != undefined ? action['description'] : 'Message!';
-            Guide.displayMessage(description,"bg-"+description_type);
+            jGuide.displayMessage(description,"bg-"+description_type);
             _this_.clickToNext = _this_.end.bind(_this_,action,callback);
             $help_top_cover.bind("click",_this_.clickToNext);
           }
@@ -42,7 +42,7 @@
        if(_this_.clickToNext){
          $help_top_cover.unbind("click",_this_.clickToNext);
        }
-       Guide.clearMessages(callback);
+       jGuide.clearMessages(callback);
      }
    };
 })(jQuery);

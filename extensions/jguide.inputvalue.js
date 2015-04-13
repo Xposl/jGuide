@@ -1,5 +1,5 @@
 (function($){
-   Guide.extension.inputvalue = {
+   jGuide.extension.inputvalue = {
      elem: null,
      input_interval: null,
      clickToNext: null,
@@ -25,7 +25,7 @@
             var inputValue = '';
             
             _this_.elem.addClass("guide-focus");
-            Guide.displayMessage(description);
+            jGuide.displayMessage(description);
             _this_.input_interval = setInterval(function(){
               inputValue += _this_.value[index++];
               _this_.elem.val(inputValue);
@@ -60,7 +60,7 @@
           $help_top_cover.unbind("click",_this_.clickToNext);
         }
         _this_.value = null;
-        Guide.clearMessages(callback);
+        jGuide.clearMessages(callback);
      }
    };
 })(jQuery);

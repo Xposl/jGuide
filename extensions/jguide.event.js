@@ -1,5 +1,5 @@
 (function($){
-   Guide.extension.event= {
+   jGuide.extension.event= {
      elem: null,
      clickToTriggerEvent: null,
      run: function(action,callback){
@@ -34,7 +34,7 @@
           if(_this_.elem.length){
             _this_.elem.addClass("guide-focus");
             if(action['description']){
-              Guide.displayMessage(action['description']);
+              jGuide.displayMessage(action['description']);
               _this_.clickToTriggerEvent = function(e){
                 e.preventDefault();
                 _this_.elem.trigger(my_evet);
@@ -68,7 +68,7 @@
          _this_.clickToEmulation = null;
        }
        if(action['description']){
-         Guide.clearMessages(callback);
+         jGuide.clearMessages(callback);
        }else{
          callback();
        }

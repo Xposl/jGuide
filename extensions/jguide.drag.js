@@ -1,5 +1,5 @@
 (function($){
-   Guide.extension.drag= {
+   jGuide.extension.drag= {
      elem: null,
      move_interval: null,
      move_offset: 60,
@@ -47,7 +47,7 @@
            _this_.elem.addClass("guide-focus");
            
            if(action['description']){
-             Guide.displayMessage(description);
+             jGuide.displayMessage(description);
              _this_.clickToNext = _this_.end.bind(_this_,action,callback);
              $help_top_cover.bind('click',_this_.clickToNext);
            }
@@ -103,7 +103,7 @@
          _this_.clickToNext = null;
        }
        if(action['description']){
-         Guide.clearMessages(callback);
+         jGuide.clearMessages(callback);
        }else if(typeof callback == 'function'){
          callback();
        }
